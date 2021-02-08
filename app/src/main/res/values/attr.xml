@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FrameLayoutView">
+        <attr name="aspect_ratio" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="CalenderView">
+        <attr name="calender_height_ratio" format="float"/>
+    </declare-styleable>
+</resources>

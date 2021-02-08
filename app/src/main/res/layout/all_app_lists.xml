@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="720px"
+    android:layout_height="1080px"
+    android:layout_gravity="right"
+    android:background="@android:color/holo_blue_light">
+    <!-- @region jide begin,add zmq for GridView AppList,使用paddingTop设置Gridview的内边距,滚动的时候item会到达GridView顶部才消失 -->
+    <GridView
+        android:id="@+id/all_app_list_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="40dp"
+        android:horizontalSpacing="40dp"
+        android:stretchMode="columnWidth"
+        android:cacheColorHint="#00000000"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="10dp"
+        android:drawSelectorOnTop="false"
+        android:gravity="center"
+        android:clipToPadding="false"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingLeft="65dp"
+        android:paddingRight="65dp"/>
+    <!-- @region jide end,add zmq for GridView AppList,使用paddingTop设置Gridview的内边距,滚动的时候item会到达GridView顶部才消失 -->
+</LinearLayout>

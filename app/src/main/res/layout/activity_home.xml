@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_white">
+
+    <LinearLayout
+        android:id="@+id/ll_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="聊天消息"
+                android:textSize="15sp"
+                android:textColor="@color/font_color"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="好友请求"
+                android:textSize="15sp"
+                android:textColor="@color/font_color"
+                android:gravity="center"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_add_sign"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="+"
+            android:textSize="30sp"
+            android:textColor="@color/font_color"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <com.itheima.ui.SlideViewPager
+        android:id="@+id/home_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:layout_marginBottom="0dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rel_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/tab_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:text="@string/tab1"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:textColor="@color/font_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_contact"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/tab_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:text="@string/tab2"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:textColor="@color/font_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_personal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/tab_personal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:text="@string/tab3"
+                android:textSize="15sp"
+                android:background="@null"
+                android:layout_centerInParent="true"
+                android:textColor="@color/font_color"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    层级Drawable应用场景:
+    典型的是手机的信号强度从强到弱有多种状态图;
+    wifi有解锁和未解锁状态,解锁和未解锁状态的图标也是很多种;
+    默认值为0,通过imageView.setImageLevel方法实现值改变;
+-->
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/green_part_bg"
+        android:minLevel="0"
+        android:maxLevel="2"/>
+    <item android:drawable="@drawable/blue_part_bg"
+        android:minLevel="3"
+        android:maxLevel="5"/>
+</level-list>

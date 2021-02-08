@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AppDemo</string>
+
+    <!-- HomeActivity -->
+    <string name="tab1">消息列表</string>
+    <string name="tab2">联系人</string>
+    <string name="tab3">个人中心</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+
+    <!-- AudioActivity -->
+    <string name="perm_grant_hite">未获取相应的权限,应用无法正常工作</string>
+
+    <!-- RefreshViewGroup刷新控件字段 -->
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_refreshing_label">正在加载</string>
+
+    <!-- 案例:分屏通知字段 -->
+    <string name="divider_screen_notification_label">退出分屏</string>
+    <string name="divider_notification_title">分屏</string>
+    <string name="divider_notification_msg">正在使用分屏模式</string>
+
+    <string name="app_widget_btn_text">AppWidget按钮</string>
+</resources>

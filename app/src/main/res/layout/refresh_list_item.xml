@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- View的descendantFocusability属性,该属性是当一个view获取焦点时,定义viewGroup和其子控件两者之间的关系 -->
+<!-- beforeDescendants: viewgroup会优先其子类控件而获取到焦点 -->
+<!-- afterDescendants:  viewgroup只有当其子类控件不需要获取焦点时才获取焦点 -->
+<!-- blocksDescendants: viewgroup会覆盖子类控件而直接获得焦点 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:descendantFocusability="blocksDescendants">
+    <ImageView
+        android:id="@+id/left_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/left_image"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"/>
+    <CheckBox
+        android:id="@+id/ck_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginRight="10dp" />
+    <view
+        class="com.itheima.ui.adapter.MyRefreshListAdapter$DeleteButton"
+        android:id="@+id/delete_btn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="删除"
+        android:textSize="15sp"
+        android:background="@color/blue"
+        tools:layout_alignParentRight="true"
+        tools:layout_marginRight="-100dp"/>
+</RelativeLayout>

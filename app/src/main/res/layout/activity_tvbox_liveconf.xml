@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF3C8">
+    <LinearLayout
+        android:id="@+id/ll_tvbox_conf_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#c50c11"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内蒙古智慧广电"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_tvbox_index_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_tvbox_conf_title">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:text="当前位置 > "
+            android:layout_marginLeft="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会议直播"
+            android:textColor="#ff0000"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- 机顶盒会议直播列表,想实现高度match_parent,就设置高度为0dp,再设置上约束和下约束 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tvbox_conflist"
+        android:layout_width="160dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/background_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_tvbox_index_tips"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- 机顶盒会议直播频道详情,点选每条直播,获取对应的频道信息 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tvbox_channel_gridlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@id/tvbox_conflist"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_tvbox_index_tips"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>

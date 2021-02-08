@@ -1,0 +1,47 @@
+{
+  "buildFiles": [
+    "/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Android.mk",
+    "/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/home/zhangming/work/android/android-ndk-r14b/src/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "jni_ffmpeg_video-release-armeabi": {
+      "artifactName": "jni_ffmpeg_video",
+      "buildCommand": "/home/zhangming/work/android/android-ndk-r14b/src/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/lib /home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libjni_ffmpeg_video.so",
+      "abi": "armeabi",
+      "output": "/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libjni_ffmpeg_video.so"
+    },
+    "jni_gralloc_buffer-release-armeabi": {
+      "artifactName": "jni_gralloc_buffer",
+      "buildCommand": "/home/zhangming/work/android/android-ndk-r14b/src/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/lib /home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libjni_gralloc_buffer.so",
+      "abi": "armeabi",
+      "output": "/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libjni_gralloc_buffer.so"
+    },
+    "main-release-armeabi": {
+      "artifactName": "main",
+      "buildCommand": "/home/zhangming/work/android/android-ndk-r14b/src/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/lib /home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libmain.so",
+      "abi": "armeabi",
+      "output": "/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libmain.so"
+    },
+    "inject-release-armeabi": {
+      "artifactName": "inject",
+      "buildCommand": "/home/zhangming/work/android/android-ndk-r14b/src/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/lib /home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/inject",
+      "abi": "armeabi",
+      "output": "/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/inject"
+    },
+    "InjectFunction-release-armeabi": {
+      "artifactName": "InjectFunction",
+      "buildCommand": "/home/zhangming/work/android/android-ndk-r14b/src/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/lib /home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libInjectFunction.so",
+      "abi": "armeabi",
+      "output": "/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libInjectFunction.so"
+    },
+    "SDL2-release-armeabi": {
+      "artifactName": "SDL2",
+      "buildCommand": "/home/zhangming/work/android/android-ndk-r14b/src/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/zhangming/work/android/App_Project/android-smp/app/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/lib /home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libSDL2.so",
+      "abi": "armeabi",
+      "output": "/home/zhangming/work/android/App_Project/android-smp/app/build/intermediates/ndkBuild/release/obj/local/armeabi/libSDL2.so"
+    }
+  }
+}

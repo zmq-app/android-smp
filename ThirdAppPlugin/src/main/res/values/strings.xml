@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ThirdAppPlugin</string>
+    <string name="click_img_toast">Click Image...</string>
+</resources>

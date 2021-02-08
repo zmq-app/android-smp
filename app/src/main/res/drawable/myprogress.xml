@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LayoutDrawable: 一种层次化的Drawable集合,通过不同的Drawable放置产生一种叠加的效果 -->
+<!-- 一个layer-list可以包含多个item,每个item表示一个Drawable -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景 -->
+    <item android:id="@android:id/background">
+        <!-- ShapeDrawable 默认形状是矩形 -->
+        <shape android:shape="rectangle">
+            <corners android:radius="0dp" />
+            <gradient
+                android:angle="0"
+                android:centerX="0.5"
+                android:startColor="@android:color/holo_orange_light"
+                android:endColor="@android:color/holo_green_light"/>
+        </shape>
+    </item>
+
+    <!-- 第一进度条样式,我想修改的,修改成简单的灰色 -->
+    <item android:id="@android:id/progress">
+        <!-- ClipDrawable 通过等级level进行裁剪另一个Drawable -->
+        <clip>
+            <shape>
+                <corners android:radius="0dp"/>
+                <gradient
+                    android:angle="0"
+                    android:centerX="0.5"
+                    android:endColor="#515151"
+                    android:startColor="#515151"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

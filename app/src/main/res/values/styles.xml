@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme,extends theme = "Theme.AppCompat.Light.NoActionBar" -->
+    <!-- Cover some attribute,style name = "Base.V7.Theme.AppCompat.Light" -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- colorPrimary  AppBarLayout背景色(此处为黑色) -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- colorPrimaryDark  状态栏颜色(此处为深绿色) -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- colorAccent  各个控件被选中时的颜色(此处为粉色) -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- android:textColorPrimary  ToolBar上的Title颜色(此处为纯白色) -->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <!-- app替换默认的主题背景白色 -->
+        <item name="android:windowBackground">@drawable/bg</item>
+    </style>
+
+    <!-- ChatRoom_SMP application theme,can be expanded -->
+    <style name="AppThemeLaunch" parent="AppTheme">
+    </style>
+
+    <!-- ProgressBar自定义样式 -->
+    <!-- 按形状样式分为圆圈进度条和水平进度条 -->
+    <style name="MyProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxHeight">50dp</item>
+        <!-- 属性indeterminateOnly设置为true,表示的是这个ProgressBar是模糊的,不明确的 -->
+        <!-- 在系统默认的style中android:indeterminateOnly设置为true,表示当前它并没有体现出具体的进度,只是一个小圆圈在转 -->
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <!-- 设置进度的drawable参数,通过这个属性页可以自定不同样式的进度条 -->
+        <item name="android:progressDrawable">@drawable/myprogress</item>
+    </style>
+</resources>

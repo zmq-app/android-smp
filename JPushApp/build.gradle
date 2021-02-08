@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.itheima.app.jpush"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [
+            JPUSH_APPKEY : "e319b0124305411fc3087bb9", //值来自开发者平台取得的AppKey
+            JPUSH_CHANNEL: "default_developer",
+        ]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    /* JPushApp Client两个依赖的jar包"libs/jcore-android-2.4.2.jar","libs/jpush-android-3.8.0.jar" */
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'com.android.support:appcompat-v7:26.0.1'
+
+    /* @region jide begin,JPushServer依赖的jar包 */
+    /* @region jide begin,需要在应用build.gradle主编译文件的repositories仓库中增加jcenter()配置,jpush-client只能从jcenter仓库中下载 */
+    implementation 'cn.jpush.api:jpush-client:3.4.6'
+    implementation 'cn.jpush.api:jiguang-common:1.1.8'
+    implementation 'io.netty:netty-all:4.1.6.Final'
+    implementation 'com.google.code.gson:gson:2.3'
+    implementation 'org.slf4j:slf4j-api:1.7.7'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.7'
+    implementation 'log4j:log4j:1.2.17'
+    /* @region jide end,需要在应用build.gradle主编译文件的repositories仓库中增加jcenter()配置,jpush-client只能从jcenter仓库中下载 */
+    /* @region jide end,JPushServer依赖的jar包[需要在应用build.gradle主编译文件的repositories仓库中增加jcenter()配置] */
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

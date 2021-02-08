@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: cn.jpush.api:jiguang-common:1.1.8@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.jpush.api/jiguang-common/1.1.8/99dab8dfef3a774bbd63b524c2d6acc105438920/jiguang-common-1.1.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.jpush.api/jiguang-common/1.1.8/70cb4b9e5cf15a7d14252ab8c1702cd403f8083f/jiguang-common-1.1.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

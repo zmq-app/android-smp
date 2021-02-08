@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@android:color/holo_orange_light">
+        <!-- column和person两个drawable需要放在drawable-480dpi目录中,如果放在drawable目录中,则图片会拉伸 -->
+        <ImageView
+            android:id="@+id/left_slide"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/column" />
+
+        <ImageView
+            android:id="@+id/right_slide"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/person" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="EventBusActivity"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/hello_text"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Hello"
+            android:textSize="18sp"
+            android:textColor="@color/blue"
+            android:clickable="true"
+            android:background="@android:color/holo_orange_light"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/kotlin_test"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:text="kotlin_test"
+                android:textSize="18sp"
+                android:textColor="@color/blue"
+                android:clickable="true"
+                android:background="@android:color/holo_orange_light"/>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

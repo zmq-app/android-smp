@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff313131</color>
+    <color name="colorPrimaryDark">#ff669900</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textColorPrimary">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+
+    <!--
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    -->
+
+    <!-- HomeActivity -->
+    <color name="tab_select_bg">#FF0000</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="font_color">#000000</color>
+
+    <!-- PersonalFragment -->
+    <color name="blue">#FF35B5E5</color>
+    <color name="blue_pressed">#FF0099CC</color>
+    <color name="green">#FF99CC00</color>
+    <color name="green_pressed">#FF669900</color>
+    <color name="purple">#FFAA66CC</color>
+    <color name="purple_pressed">#FF9933CC</color>
+    <color name="yellow">#FFFFBB33</color>
+    <color name="yellow_pressed">#FFFF8800</color>
+
+    <color name="color_0064d2">#0064d2</color>
+    <color name="theme_bg_color">#fff8f7f5</color>
+    <color name="pagefragment_textcolor_cust1">#ff000000</color>
+    <color name="pagefragment_textcolor_common">#ff000000</color>
+    <color name="pagefragment_view_line_bg_common">#ffc0c0c0</color>
+</resources>

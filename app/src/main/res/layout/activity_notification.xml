@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Show Notification"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:onClick="show_notification"
+        android:layout_gravity="center"
+        android:gravity="center" />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel Notification"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:onClick="cancel_notification"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp" />
+    <!--
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Calling Hidden Class"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:onClick="calling_hidden_class"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp" />
+    -->
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="SysPropManager Class"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:onClick="callingSysPropManager"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Silence Installer"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:onClick="silence_installer"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="openFirewall"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:onClick="openSystemFirewall"
+            android:layout_gravity="center"
+            android:gravity="center" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="closeFirewall"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="closeSystemFirewall"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="100dp" />
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/tv_close_left_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textColor="@color/blue"
+        android:text="Close Menu"
+        android:clickable="true" />
+    <TextView
+        android:id="@+id/tv_article_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textColor="@color/blue"
+        android:text="Article"
+        android:clickable="true"
+        android:layout_marginTop="25dp" />
+    <TextView
+        android:id="@+id/tv_video_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textColor="@color/blue"
+        android:text="Video"
+        android:clickable="true"
+        android:layout_marginTop="25dp" />
+</LinearLayout>

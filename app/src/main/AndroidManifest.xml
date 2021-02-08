@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itheima.smp">
+
+    <!-- 由于APK插件化技术中相同资源的引用在R文件的ID值需要保持一致,比如:原有的R.mipmap.ic_launcher -->
+    <!-- 这里使用巧妙的办法,使用drawable-nodpi下的abc_aa_launcher作为icon,确保宿主的R.drawable.abc_aa_launcher与插件的R.mipmap.abc_aa_launcher最终的id值保持一致 -->
+    <application
+        android:name="com.itheima.app.SmpApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppThemeLaunch">
+        <!-- Demo项目主页的Activity -->
+        <activity
+            android:name="com.itheima.ui.HomeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- Android音频Audioecord,AudioTrack测试Activity -->
+        <activity
+            android:name="com.itheima.ui.AudioActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- Android6.0权限申请帮助类 -->
+        <activity
+            android:name="com.itheima.utils.permission.HelpActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 使用com.google.zxing jar包进行二维码生成的测试Activity -->
+        <activity
+            android:name="com.itheima.ui.QRActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- View工作原理的测试Acitivity -->
+        <activity
+            android:name="com.itheima.ui.ViewOperatorActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 日历控件的使用测试 -->
+        <activity
+            android:name="com.itheima.ui.CalendarActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- ListView下拉刷新or上拉加载测试[隐式启动方式] -->
+        <activity
+            android:name="com.itheima.ui.RefreshViewActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.itheima.view1"/>
+                <action android:name="com.itheima.view2"/>
+                <category android:name="com.itheima.viewgroup"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/mpeg" android:scheme="http" android:host="www.itheima.com"/>
+            </intent-filter>
+        </activity>
+        <!-- 画板测试Activity -->
+        <activity
+            android:name="com.itheima.ui.PaletteViewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 使用自定义的ContentProvider测试Activity -->
+        <activity
+            android:name="com.itheima.ui.BookProviderActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- Binder机制AIDL方式测试Activity -->
+        <activity
+            android:name="com.itheima.ui.BookManagerActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 自己动手实现最原始的Binder测试案例Activity -->
+        <activity
+            android:name="com.itheima.binder.MyBinderClient"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- Binder连接池方式测试Activity -->
+        <activity
+            android:name="com.itheima.ui.BinderPoolActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- Drawable资源使用测试Activity -->
+        <activity
+            android:name="com.itheima.ui.DrawableActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- Touch事件的传递机制研究Activity -->
+        <activity
+            android:name="com.itheima.ui.touch.TouchActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- OpenGL ES,GLSurfaceView相关 -->
+        <activity
+            android:name="com.itheima.ui.opengl.activity.OneOpenGlActivity">
+        </activity>
+        <activity
+            android:name="com.itheima.ui.opengl.activity.TwoOpenGlActivity">
+        </activity>
+        <activity
+            android:name="com.itheima.ui.opengl.activity.CameraYUVPicActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name="com.itheima.ui.opengl.activity.CameraSurfaceViewShowActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 研究分屏界面的应用列表GridActivity -->
+        <activity
+            android:name="com.itheima.ui.gridview.GridActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <!-- 研究分屏通知NotificationActivity[另外包括系统属性设置,隐藏类调用,防火墙开关等] -->
+        <activity android:name="com.itheima.ui.NotificationActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <!-- 有关DragShadowBuilder阴影拖拽View的案例 -->
+        <activity android:name="com.itheima.ui.DragViewActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <!-- 有关android插件化,宿主APP插件化相关的Activity -->
+        <activity android:name="com.itheima.pluginapk.HostAppActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name="com.itheima.pluginapk.ProxyPluginActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <!-- 有关电源PowerManager接口使用 -->
+        <activity android:name="com.itheima.ui.PowerManagerActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <!-- 模拟ANR持锁问题 -->
+        <activity android:name="com.itheima.ui.ANRMonitorActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- Native FFmpeg解码-->
+        <activity android:name="com.itheima.ui.JniFFmpegVideoDecoderActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 输入法设置Activity -->
+        <activity android:name="com.itheima.ui.InputMethodSettingActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- EventBus事件机制,SlideMenu侧滑菜单 -->
+        <activity android:name="com.itheima.ui.EventBusActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 文章Activity,android8.0方向旋转生命周期的验证,MVP架构 -->
+        <activity android:name="com.itheima.ui.ArtActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation">
+        </activity>
+        <!-- android RTC全局定时器AlarmActivity -->
+        <activity android:name="com.itheima.ui.AlarmActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- android Handler removeCallbacks问题的研究 -->
+        <activity android:name="com.itheima.ui.TimerRunnableActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- android dragger2 mvp框架使用 -->
+        <activity android:name="com.itheima.ui.Dagger2Activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.itheima.ui.MvpMainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- android sensor传感器示例 -->
+        <activity android:name="com.itheima.ui.SensorDemoActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="keyboard|screenSize|orientation|layoutDirection">
+        </activity>
+        <!-- RxJava语法学习示例 -->
+        <activity android:name="com.itheima.ui.RxJavaActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 最基本的Kotlin版RecyclerView列表案例,适配器使用继承BaseQuickAdapter的方式 -->
+        <activity android:name="com.itheima.kotlin.ui.ConfActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- Spinner下拉列表框控件的基本使用,省市区三级菜单联动 -->
+        <!-- 设置包含Spinner控件的Activity的主题为Light.NoActionBar样式,解决Spinner弹出框遮挡住显示框,同时每个item条目会增加浅灰色的分割线 -->
+        <activity android:name="com.itheima.kotlin.ui.SpinnerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+        </activity>
+        <!-- 使用RecyclerView,AndroidX CardView等控件模拟微信聊天的实现 -->
+        <activity android:name="com.itheima.ui.WeChatRecyclerViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 使用RecyclerView控件创建一颗多级树形选择列表案例 -->
+        <activity android:name="com.itheima.ui.RecyclerViewTreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!-- 内蒙古广电机顶盒会议直播界面(使用RecyclerView LinearLayoutManager线性布局管理器 or GridLayoutManager网格布局管理器) -->
+        <activity android:name="com.itheima.kotlin.ui.TvBoxLiveConfActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!--
+        <activity
+            android:name="com.itheima.test.HandlerDemoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name="com.itheima.test.FragmentDemoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        -->
+        <activity android:name="com.itheima.test.StartBindActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 不同drawable资源目录加载同一大小的Bitmap所占的内存和实际显示图片大小的探究 -->
+        <activity android:name="com.itheima.ui.LoaderDrawableBitmapActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <!-- 注册远程服务类BookManagerService[AIDL方式的进程间的通讯] -->
+        <service
+            android:name="com.itheima.service.BookManagerService"
+            android:process=":remote">
+        </service>
+        <!-- 自己动手实现最原始的Binder远程服务类MyBinderService -->
+        <service
+            android:name="com.itheima.binder.MyBinderService"
+            android:process=":remote">
+        </service>
+        <!-- Binder连接池对应的单一远程服务类BinderPoolService -->
+        <service
+            android:name="com.itheima.service.BinderPoolService"
+            android:process=":remote">
+        </service>
+        <!-- AppWidget中的ListView控件需要使用的Service -->
+        <service android:name="com.itheima.service.MyAppWidgetListService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false"
+            android:enabled="true">
+        </service>
+        <!-- Android输入法服务ImeService,继承InputMethodService -->
+        <service android:name="com.itheima.service.ImeService"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+            <meta-data android:name="android.view.im"
+                android:resource="@xml/method"/>
+        </service>
+        <!-- Android定时器服务AlarmService,运行于独立的进程processName="com.itheima.smp:alarmservice" -->
+        <service android:name="com.itheima.service.AlarmService"
+            android:process=":alarmservice"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+        <service android:name="com.itheima.service.AlarmRemoteService"
+            android:process=":remote_alarmservice"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+        <!-- Android start or bind 启动Service -->
+        <service android:name="com.itheima.test.StartBindService">
+            <intent-filter>
+                <action android:name="com.itheima.mytest.service"/>
+                <category android:name="com.itheima.mytest.category"/>
+            </intent-filter>
+        </service>
+        <!-- Android安全 Activity劫持核心服务 -->
+        <service android:name="com.itheima.service.HijackService"
+            android:exported="true"/>
+
+        <!-- 收到通知消息后的行为,发送PendingIntent Broadcast -->
+        <receiver android:name="com.itheima.receiver.NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.itheima.home.action"/>
+                <action android:name="com.itheima.click.action"/>
+            </intent-filter>
+        </receiver>
+        <!-- 自定义的AppWidget BroadcastReceiver,继承AppWidgetProvider [最后一个Action作为小部件标识符而必须存在] -->
+        <receiver android:name="com.itheima.receiver.MyAppWidgetReceiver">
+            <intent-filter>
+                <action android:name="com.itheima.action.CHANGE_IMAGE"/>
+                <action android:name="com.itheima.action.ROTATE_IMAGE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_app_widget_info">
+            </meta-data>
+        </receiver>
+        <!-- 自定义Alarm BroadcastReceiver,RTC/RTC_WAKEUP or ELAPSED_REALTIME/ELAPSED_REALTIME_WAKEUP -->
+        <receiver android:name="com.itheima.receiver.AlarmBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.itheima.receiver.AlarmBroadcastReceiver"/>
+            </intent-filter>
+        </receiver>
+        <!-- 开机自启动的广播接收者AutoStartReceiver -->
+        <receiver
+            android:name="com.itheima.receiver.AutoStartReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 创建自定义的ContentProvider -->
+        <provider
+            android:authorities="com.itheima.provider.BookProvider"
+            android:name="com.itheima.provider.BookProvider"
+            android:process=":BookProvider">
+        </provider>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 如果该应用是System用户进程,调用Settings.Global.putInt方法时,不必申请此权限,否则需要申请该系统权限 -->
+    <!-- <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- 接收BOOT_COMPLETED广播需要的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 如果使用Instrumentation框架注入事件需要申请此权限(system app permission granted) -->
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+
+    <!-- @region jide begin,add zmq for申请framework中自定义的权限"android.permission.SELFGROUP",其映射的gid=AID_SELF_GROUP=3011 -->
+    <uses-permission android:name="android.permission.SELFGROUP" />
+    <!-- @region jide end,add zmq for申请framework中自定义的权限"android.permission.SELFGROUP",其映射的gid=AID_SELF_GROUP=3011 -->
+
+    <!-- 注明使用OpenGl ES 2.0标准 -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+</manifest>

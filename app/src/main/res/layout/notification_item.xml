@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/divider_screen_notification_pic"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divider_notification_title"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divider_notification_msg"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/exit_divider_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:text="@string/divider_screen_notification_label"
+        android:background="@drawable/exit_divider_btn_bg"
+        android:textSize="14sp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+</LinearLayout>
