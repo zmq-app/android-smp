@@ -21,6 +21,13 @@ import android.widget.ListView;
 
 import com.itheima.di.modules.GlideApp;
 
+import net.sourceforge.pinyin4j.PinyinHelper;
+import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
+import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+
 import java.lang.reflect.Method;
 import java.util.Calendar;
 import java.util.Date;
@@ -208,5 +215,34 @@ public class CommonUtils {
      */
     public static void GlideAppLoadImage(Context context, ImageView imageView, String imageUrl) {
         GlideApp.with(context).load(imageUrl).centerCrop().into(imageView);
+    }
+
+    /**
+     * @Subject 使用pingyin4j函数库,将输入的中文字符串转化为拼音全称.后续可通过比较首字母排序和条目分类
+     * @param inputStr
+     * @return
+     */
+    public static String getPingYin(String inputStr) {
+        HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
+        format.setCaseType(HanyuPinyinCaseType.LOWERCASE);
+        format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
+        format.setVCharType(HanyuPinyinVCharType.WITH_V);
+
+        String output = "";
+        char[] input = inputStr.trim().toCharArray();
+        try {
+            for (char curchar : input) {
+                if (java.lang.Character.toString(curchar).matches("[\\u4E00-\\u9FA5]+")) {
+                    String[] temp = PinyinHelper.toHanyuPinyinStringArray(curchar, format);
+                    output += temp[0];
+                } else {
+                    output += java.lang.Character.toString(curchar);
+                }
+            }
+        } catch (BadHanyuPinyinOutputFormatCombination e) {
+            e.printStackTrace();
+        }
+
+        return output;
     }
 }

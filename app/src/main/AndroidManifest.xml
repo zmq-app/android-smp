@@ -185,6 +185,11 @@
         <activity android:name="com.itheima.ui.WeChatRecyclerViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!-- RecyclerView控件实现联系人列表(多个Item条目类型) -->
+        <activity android:name="com.itheima.ui.ContactRecyclerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

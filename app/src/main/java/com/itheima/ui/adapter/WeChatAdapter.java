@@ -29,7 +29,7 @@ public class WeChatAdapter extends RecyclerView.Adapter<WeChatAdapter.ViewHolder
     }
 
     @Override
-    public WeChatAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int position) {
+    public WeChatAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //布局加载器
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_wechat_view, parent, false);
         return new ViewHolder(view);

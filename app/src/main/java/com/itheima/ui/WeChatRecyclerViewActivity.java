@@ -81,6 +81,8 @@ public class WeChatRecyclerViewActivity extends AppCompatActivity {
 
     /**
      * 发送聊天信息
+     * (1)调用Adapter类的notifyItemInserted方法,在RecyclerView控件的底部插入一条消息条目
+     * (2)调用RecyclerView的scrollToPosition方法,自动切换滚动到最后一条消息条目的位置
      * @param message
      */
     void sendChatMsg(String message) {
@@ -92,6 +94,8 @@ public class WeChatRecyclerViewActivity extends AppCompatActivity {
 
     /**
      * 模拟回复消息
+     * (1)调用Adapter类的notifyItemInserted方法,在RecyclerView控件的底部插入一条消息条目
+     * (2)调用RecyclerView的scrollToPosition方法,自动切换滚动到最后一条消息条目的位置
      * @param msg
      */
     void replyChatMsg(String msg) {
@@ -111,6 +115,8 @@ public class WeChatRecyclerViewActivity extends AppCompatActivity {
 
     /**
      * 接收聊天信息
+     * (1)调用Adapter类的notifyItemInserted方法,在RecyclerView控件的底部插入一条消息条目
+     * (2)调用RecyclerView的scrollToPosition方法,自动切换滚动到最后一条消息条目的位置
      * @param message
      */
     void recvChatMessage(String message) {
