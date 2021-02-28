@@ -117,7 +117,11 @@ public class ContactRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public int getItemViewType(int position) {
-        return mItemLists.get(position).getItemType();
+        /* 获取条目的ItemType类型 */
+        /* 调用方式: tryGetViewHolderForPositionByDeadline -> type = mAdapter.getItemViewType(); -> mAdapter.createViewHolder(RecyclerView.this,type); -> onCreateViewHolder(...) */
+        final int itemType = mItemLists.get(position).getItemType();
+        Log.i("zhangming","ContactRecyclerViewAdapter itemType = "+itemType);
+        return itemType;
     }
 
     /**

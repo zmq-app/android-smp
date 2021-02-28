@@ -101,6 +101,10 @@
         <activity
             android:name="com.itheima.ui.opengl.activity.CameraSurfaceViewShowActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!-- 研究分屏界面的应用列表GridActivity -->
         <activity
@@ -190,10 +194,6 @@
         <activity android:name="com.itheima.ui.ContactRecyclerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- 使用RecyclerView控件创建一颗多级树形选择列表案例 -->
         <activity android:name="com.itheima.ui.RecyclerViewTreeActivity"

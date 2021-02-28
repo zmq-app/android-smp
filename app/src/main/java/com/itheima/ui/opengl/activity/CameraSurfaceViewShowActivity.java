@@ -41,6 +41,9 @@ public class CameraSurfaceViewShowActivity extends Activity implements SurfaceHo
         Manifest.permission.CAMERA
     };
 
+    /* 是否模拟Camera摄像头抢占问题Flag标志,数值为true,表示模拟Camera抢占,数值为false,表示不模拟 */
+    private static final boolean isMonitorCameraPreemptiveFlags = false;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,11 +61,8 @@ public class CameraSurfaceViewShowActivity extends Activity implements SurfaceHo
         mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 
         rotateChangeBtn = (Button) findViewById(R.id.btn_rotation_change);
-        rotateChangeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                executeSurfaceAnimation();
-            }
+        rotateChangeBtn.setOnClickListener((view) -> {
+            executeSurfaceAnimation();
         });
     }
 
@@ -138,14 +138,27 @@ public class CameraSurfaceViewShowActivity extends Activity implements SurfaceHo
     public void surfaceCreated(SurfaceHolder holder) {
         try {
             // Open the Camera in preview mode
-            mCamera = Camera.open();
-            mCamera.setDisplayOrientation(90);
+            if (mCamera == null) {
+                mCamera = Camera.open();
+                mCamera.setDisplayOrientation(90);
+            } else {
+                //停止预览
+                mCamera.stopPreview();
+                if (!isMonitorCameraPreemptiveFlags) {
+                    //释放摄像头资源,重启摄像头
+                    mCamera.release();
+                    mCamera = Camera.open();
+                    mCamera.setDisplayOrientation(90);
+                }
+            }
+            // 开启预览
             mCamera.setPreviewDisplay(holder);
             mCamera.startPreview();
-            // Java Lamba表达式
+            // 设置预览回调接口(Java Lamba表达式)
             mCamera.setPreviewCallback((byte[] data, Camera camera) -> {
-                Log.i("zhangming","camera rotation 90 degree bitmap data...");
+                //Log.i("zhangming","camera rotation 90 degree bitmap data...");
             });
+            Log.i("zhangming", "surfaceCreated mCamera = "+mCamera);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -153,29 +166,35 @@ public class CameraSurfaceViewShowActivity extends Activity implements SurfaceHo
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        Log.v("zhangming","surfaceChanged width = "+width+" height = "+height+" format = "+format);
-        mCamera.autoFocus(new Camera.AutoFocusCallback() {
-            @Override
-            public void onAutoFocus(boolean success, Camera camera) {
-                if (success) {
-                    Camera.Parameters mParameters = mCamera.getParameters();
-                    mParameters.setPictureFormat(PixelFormat.JPEG);  //设置图片输出格式,默认格式为PixelFormat.RGB_565 = 4
+        if (mCamera != null) {
+            Log.i("zhangming","surfaceChanged width = "+width+" height = "+height+" format = "+format+" mCamera = "+mCamera);
+            mCamera.autoFocus(new Camera.AutoFocusCallback() {
+                @Override
+                public void onAutoFocus(boolean success, Camera camera) {
+                    if (success) {
+                        Camera.Parameters mParameters = mCamera.getParameters();
+                        mParameters.setPictureFormat(PixelFormat.JPEG);  //设置图片输出格式,默认格式为PixelFormat.RGB_565 = 4
 //                    mParameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH); //预览持续发光
-                    mParameters.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE); //持续对焦模式
-                    mCamera.setParameters(mParameters);
-                    mCamera.startPreview();
-                    mCamera.cancelAutoFocus();
+                        mParameters.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE); //持续对焦模式
+                        mCamera.setParameters(mParameters);
+                        mCamera.startPreview();
+                        mCamera.cancelAutoFocus();
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
         if (mCamera != null) {
-            mCamera.stopPreview();
-            mCamera.release();
-            mCamera = null;
+            Log.i("zhangming", "surfaceDestroyed mCamera = "+mCamera);
+            if (!isMonitorCameraPreemptiveFlags) {
+                // 停止预览
+                mCamera.stopPreview();
+                mCamera.release();
+                mCamera = null;
+            }
         }
     }
 }
