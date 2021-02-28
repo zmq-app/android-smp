@@ -101,10 +101,6 @@
         <activity
             android:name="com.itheima.ui.opengl.activity.CameraSurfaceViewShowActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- 研究分屏界面的应用列表GridActivity -->
         <activity
@@ -204,6 +200,15 @@
         <activity android:name="com.itheima.kotlin.ui.TvBoxLiveConfActivity"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!-- 滑动侧边栏SideBar案例(用于山东大数据项目的会控界面展示与会者列表) -->
+        <activity android:name="com.itheima.ui.SideBarActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!--
         <activity

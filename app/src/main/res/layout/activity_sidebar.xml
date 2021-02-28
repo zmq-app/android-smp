@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/side_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 主页 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 标题栏样式 -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="20dp"
+            app:subtitleTextColor="@android:color/white"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="侧滑栏"
+            app:titleTextColor="@android:color/white">
+        </android.support.v7.widget.Toolbar>
+        <!-- 主页内容 -->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_switch_side_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@null"
+                android:text="点击显示或隐藏侧滑栏"
+                android:textColor="@color/green"
+                android:textSize="18sp"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <!-- 侧边栏(本质是一个FrameLayout控件) -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/side_bar_view"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#8835B5E5"
+        app:insetForeground="@android:color/transparent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/conf_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/background_white"
+                    android:text="会场列表"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_conf_lists"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
